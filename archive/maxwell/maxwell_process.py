@@ -6,12 +6,12 @@ with open('maxwell.datapoints', 'r') as file:
 
 s = [[float(x) for x in k.split(' ')] for k in s.split('\n')[:-1]]
 
-N = 100
+N = 200
 dx = 5
 out = [0] * (N + 1)
 
 def proc(x):
-	x = int(abs(x) // dx)
+	x = int((abs(x) + dx / 2) // dx)
 	if x < 0 or x >= N:
 		x = N
 	return x

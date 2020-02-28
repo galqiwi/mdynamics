@@ -6,5 +6,12 @@ nFrames = 500
 dt = 0.00016
 UPF = 1
 cell_size = pow(2, 1/6.)
+particles_v[i] = 200 * (v_rand() - Vector3D(.5, .5, .5))
 
 Данные из 40 прогонов программы
+
+Запуск обработчика данных:
+python3 maxwell_process.py > maxwell.plotdata && gnuplot maxwell.gnuplot
+
+Результат:
+Распределение скоростей частиц в конце симуляции соответствует распределению Максвелла

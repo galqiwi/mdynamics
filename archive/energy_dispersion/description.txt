@@ -1,0 +1,16 @@
+Дисперсия энергии в зависимости от количества сабфреймов в фрейме
+
+Параметры программы:
+Nx = 10;
+nFrames = 500;
+nframes_start_dispersion = 250;
+dt = 0.0005;
+cell_size = pow(2, 1/6.);
+particles_v[i] = 200 * (v_rand() - Vector3D(.5, .5, .5))
+
+Запуск обработчика данных:
+python3 dispersion_afterprocess.py > energy_dispersion.plotdata && tail energy_dispersion.plotdata -n 12 > energy_dispersion_pured.plotdata && gnuplot energy_dispersion.gnuplot
+
+Результат:
+Из линеаризации следует, что
+D = A * dt ^ 7
