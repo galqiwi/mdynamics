@@ -1,0 +1,36 @@
+
+
+*******************************************************************************
+Sat Feb 29 04:04:51 2020
+
+
+FIT:    data read from 'maxwell.plotdata' u 1:2
+        format = x:z
+        #datapoints = 48
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a * x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.2541160824e+07   0.00e+00  7.40e+02    1.000000e+00   1.000000e+00
+   6 6.1561826970e-01  -5.18e-04  7.40e-04   -1.699594e-03   3.900860e+00
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 0.615618
+rel. change during last iteration : -5.1815e-09
+
+degrees of freedom    (FIT_NDF)                        : 46
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.115685
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.013383
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -0.00169959      +/- 2.334e-05    (1.373%)
+b               = 3.90086          +/- 0.02443      (0.6262%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.730  1.000 

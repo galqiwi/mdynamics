@@ -97,6 +97,7 @@ void print_xyz(ofstream& fout, Vector3D* particles, int N) {
 
 void thread_forces_init(int N, Vector3D* particles_old, Vector3D* forces, double bounce, int thread_id, int NTHREADS) {
 	for (int i = thread_id; i < N; i += NTHREADS) {
+		
 		for (int k = 0; k < N; k++) {
 			if (k == i)
 				continue;
@@ -124,6 +125,7 @@ void process_stupid(int N, int NTHREADS, double dt, double bounce, thread* threa
 	for (int i = 0; i < NTHREADS; i++) {
 		threads[i].join();
 	}
+
 	for(int i = 0; i < N; i++) {
 		particles_v[i] = particles_v_old[i] + (forces_old[i] + forces[i]) * (dt / 2);
 	}

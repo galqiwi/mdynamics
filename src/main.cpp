@@ -3,7 +3,7 @@
 #include "dynamics.h"
 
 void midprocessing(int N, int Nx, Vector3D* particles, Vector3D* particles_v, thread* threads, int NTHREADS, double bounce, double cell_size, int frame/*, long double& sum_energy, long double& sum_energy2, int nframes_start_dispersion*/) {
-	long double full_energy = full_penergy(particles, N, bounce, threads, NTHREADS) + full_kenergy(particles_v, N, bounce);
+	long double full_energy = 1;//full_penergy(particles, N, bounce, threads, NTHREADS) + full_kenergy(particles_v, N, bounce);
 	static long double init_full_energy = full_energy;
 
 	double r2 = 0;
@@ -40,8 +40,8 @@ void postprocessing(int N, int Nx, Vector3D* particles, Vector3D* particles_v, d
 int main(int argc, char* argv[]) {
 	srand (time(NULL));
 	
-	int Nx = 10;
-	int nFrames = 500;
+	int Nx = 15;
+	int nFrames = 50;
 	int nframes_start_dispersion = 250;
 	int N = Nx * Nx * Nx;
 	double dt = 0.0005;
